@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 3 配置连接池-->
+    <bean id="datasourceId" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test_index?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT"/>
+        <property name="user" value="noneroot"/>
+        <property name="password" value="18142513872"/>
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+    </bean>
+
+
+    <!--2 配置jdbc template-->
+    <bean id="jdbcTemplateId" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="datasourceId"></property>
+
+    </bean>
+    <!-- 1 配置dao-->
+<bean id="userDaoId" class="top.forethought.framework.jdbctemplate.UserDao">
+    <property name="jdbcTemplate" ref="jdbcTemplateId"/>
+
+</bean>
+
+
+</beans>
