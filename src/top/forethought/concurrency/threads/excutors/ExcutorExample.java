@@ -1,12 +1,15 @@
 package top.forethought.concurrency.threads.excutors;
 
 import top.forethought.concurrency.threads.ThreadRunnable;
-import top.forethought.concurrency.threads.ThreadState;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 // 两级调度模型
 // 任务->executors->线程池->os 内核->cpu
+// 为什么需要线程池？
+// 线程的生命状态;新建-》就绪(等待cpu调度）-》运行-》结束
+// 线程的核心部分是运行，但是状态转换需要时间
+// 如果使用线程池，线程池则是创建一定数量的线程来执行运行部分，少了其他状态，使得run 更快执行
 
 
 //Executor 管理多个异步任务的执行，而无需程序员显式地管理线程的生命周期。这里的异步是指多个任务的执行互不干扰，不需要进行同步操作。
@@ -19,9 +22,10 @@ import java.util.concurrent.Executors;
 public class ExcutorExample {
 
     public static void main(String[] args) {
-//        ExecutorService executorService= Executors.newCachedThreadPool();
+//      ExecutorService executorService=   Executors.newCachedThreadPool();
 //        ExecutorService executorService= Executors.newSingleThreadExecutor();
         ExecutorService executorService= Executors.newFixedThreadPool(2);
+
         for(int i=0;i<50;i++){
             executorService.execute(new ThreadRunnable());
         }

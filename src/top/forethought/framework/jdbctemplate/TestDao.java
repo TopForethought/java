@@ -1,16 +1,12 @@
 package top.forethought.framework.jdbctemplate;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.sun.jmx.snmp.SnmpStatusException;
+
 import org.junit.Test;
-import org.springframework.beans.factory.xml.XmlReaderContext;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
-import sun.nio.cs.US_ASCII;
-
-import javax.sql.DataSource;
-import java.lang.reflect.AnnotatedArrayType;
 import java.util.ArrayList;
 import java.util.List;
 

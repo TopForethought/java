@@ -1,6 +1,6 @@
 package top.forethought.javagrammer;
 
-import com.sun.jmx.snmp.SnmpStatusException;
+
 
 public class TryCatch {
     public static void main(String[] args) {
