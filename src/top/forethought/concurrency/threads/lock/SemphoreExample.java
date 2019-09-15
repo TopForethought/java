@@ -14,7 +14,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
  */
 public class SemphoreExample {
 
-
+       // CyclicBarrier
         private static final int maxThreadCount=3;
         private static final int clientCount=40;
 

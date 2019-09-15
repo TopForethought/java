@@ -35,10 +35,15 @@ public class MyLockSync implements Lock {
            if(getState()==0){
                throw new IllegalMonitorStateException();
            }
+           if(getExclusiveOwnerThread()!=Thread.currentThread()){ // 只能由持有锁的线程去解锁
+               return false;
+           }
            setExclusiveOwnerThread(null);
            setState(0);
            return true;
        }
+
+
        // 返回一个condition ,每个condition都包含一个condition 队列
        Condition newCondition(){
 

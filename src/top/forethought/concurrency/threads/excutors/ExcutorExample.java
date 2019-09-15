@@ -19,6 +19,10 @@ import java.util.concurrent.Executors;
 //    CachedThreadPool：一个任务创建一个线程；
 //    FixedThreadPool：所有任务只能使用固定大小的线程；
 //    SingleThreadExecutor：相当于大小为 1 的 FixedThreadPool
+// 底层构造方法都是：
+//ThreadPoolExecutor(nThreads, nThreads,
+//        0L, TimeUnit.MILLISECONDS,
+//        new LinkedBlockingQueue<Runnable>());
 public class ExcutorExample {
 
     public static void main(String[] args) {

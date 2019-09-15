@@ -4,6 +4,8 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 // 暂时此方法未通过
+// 判断root2 是偶是roo1 的子树
+
 
 /**
  *
@@ -41,21 +43,20 @@ public class SubTree {
          return false;
     }
 
+     // 判断root2 是否 是root1 的一部分
+    // 节点必须相同
     boolean doSearch(TreeNode root1,TreeNode root2){
 
-        if(root1==null && root2==null){
+        if( root2==null){
             return true;
         }
-
-      //
-        if   (  root1!=null && root2!=null && root1.val==root2.val){
-            if(root2.left==null && root2.right==null){
-                return true;
-            }
-            return doSearch(root1.left,root2.left)&& doSearch(root1.right,root2.right);
-        }
+       if(root1==null){
+           return false;
+       }
+       if(root1.val==root2.val){
+           return doSearch(root1.left,root2.left)&&doSearch(root1.right,root2.right);
+       }
         return false;
-
     }
 
 }

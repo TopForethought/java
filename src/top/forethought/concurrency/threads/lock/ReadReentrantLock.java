@@ -27,7 +27,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *         是链表最靠前的(最接近 被移除的那个节点的节点)
  *          LockSupport.unpark(s.thread);// 这是为了给s.thread permit,让这个线程从blocked,变成unblocked
  *
- *  比较费时的操作时unlock ,这需要查找被移除节点的下一个可用(指waitStatus<=0的节点)后继
+ *  比较费时的操作是unlock ,这需要查找被移除节点的下一个可用(指waitStatus<=0的节点)后继
  *  waitStatus>0 的状态有:
  *  CANCELED:to indicate thread has cancelled
  *

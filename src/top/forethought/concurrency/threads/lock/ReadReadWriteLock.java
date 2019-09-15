@@ -1,5 +1,7 @@
 package top.forethought.concurrency.threads.lock;
 
+
+
 public class ReadReadWriteLock {
     /**
      *  读写锁:
@@ -24,4 +26,5 @@ public class ReadReadWriteLock {
      *
      *
      */
+
 }
