@@ -1,6 +1,6 @@
 package top.forethought.foroffer.acwing.week6;
 
-import java.util.HashMap;
+
 import java.util.HashSet;
 
 /**
@@ -61,6 +61,6 @@ public class Leetcode76MinimumWindowSubstring {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Leetcode76MinimumWindowSubstring().minWindow("AbC","AB"));
+        System.out.println(new Leetcode76MinimumWindowSubstring().minWindow("AbC","Ab"));
     }
 }
