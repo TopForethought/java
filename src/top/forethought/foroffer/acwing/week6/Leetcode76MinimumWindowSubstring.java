@@ -4,8 +4,9 @@ package top.forethought.foroffer.acwing.week6;
 import java.util.HashSet;
 
 /**
- * 实现存在问题
+ *
  * 给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：包含 T 所有字母的最小子串。
+ * 单调队列（滑动窗口）
  */
 
 public class Leetcode76MinimumWindowSubstring {
@@ -16,7 +17,6 @@ public class Leetcode76MinimumWindowSubstring {
     // 移动slow ，字符出现次数减少 ，同时需要判断当前区间 是否和服条件，然后更新结果
     // 复杂度：o(2n)
     int[] appearCount;//记录i,j 区间各种字母出现的次数
-
     // 应该只记录 字符串 T 含有的字母
     public String minWindow(String s, String t) {
 
