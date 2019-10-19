@@ -1,4 +1,4 @@
-package top.forethought.foroffer.acwing.week6;
+package top.forethought.foroffer.acwing.stack_queue_window_week6;
 
 import java.util.Stack;
 

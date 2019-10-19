@@ -8,7 +8,7 @@ package top.forethought.foroffer.acwing;
 //        求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。
 //        输出最大价值。
 
-import top.forethought.concurrency.threads.collections.map.HashMaoDemo;
+
 
 import java.util.*;
 

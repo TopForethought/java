@@ -30,9 +30,9 @@ public class Leetcide216Combination {
            return ;
        }
        for(int i=start;i<=9;i++){
-           path.push(i);
+           path.push(i);// 压入节点
            dfs(k-1,n-i,i+1);
-           path.pop();
+           path.pop();// 恢复现场
        }
     }
 

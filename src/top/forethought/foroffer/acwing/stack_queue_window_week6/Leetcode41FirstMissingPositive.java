@@ -1,4 +1,4 @@
-package top.forethought.foroffer.acwing.week6;
+package top.forethought.foroffer.acwing.stack_queue_window_week6;
 
 /**
  * class: 第一个缺失的正数（ 实现有问题）

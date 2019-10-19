@@ -1,4 +1,4 @@
-package top.forethought.foroffer.acwing.week6;
+package top.forethought.foroffer.acwing.stack_queue_window_week6;
 
 /**
  *  删除有序数组中的重复元素// 原地删除，额外使用o(1) 的空间实现

@@ -10,7 +10,7 @@ import java.util.concurrent.LinkedBlockingDeque;
  * date:      2019/8/31
  */
 public class Leetcode3LongestSubstringWithoutRepeatingCharacters {
- // 使用队列  ，如果当前符号在队列中存在
+ // 使用队列  如果当前符号在队列中存在
     // 移除第一次出现的当前元素及其之前元素，当前元素入队
     public int lengthOfLongestSubstring(String s) {
         BlockingDeque<Character> queue=new LinkedBlockingDeque<>();
