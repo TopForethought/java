@@ -3,6 +3,7 @@ package top.forethought.concurrency.threads;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * author : wangwei
@@ -16,7 +17,7 @@ public class ReadVolatile {
 
 
 
-
+    private static AtomicInteger count=new AtomicInteger();
     // 多个线程对volatile  修饰的变量操作等价效果如下
     private volatile long value=0;
     public  synchronized  void set(long l){
@@ -29,14 +30,18 @@ public class ReadVolatile {
         return this.value;
      }
      public void  getAndIncrement(){
+
         long temp=get();
         temp=temp+1;
         set(temp);
+         count.getAndIncrement();
      }
     public void  getAndIncrement2(){
+
         long temp=this.value;
         temp=temp+1;
         this.value=temp;
+        count.getAndIncrement();
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -46,7 +51,7 @@ public class ReadVolatile {
         final ReadVolatile obj = new ReadVolatile();
         for (int i = 0; i < MAX_THRED; i++) {
             executorService.submit(() -> {
-                //obj.getAndIncrement2();
+//                obj.getAndIncrement2();
                 obj.getAndIncrement();
                 countDownLatch.countDown();
             });
@@ -55,7 +60,7 @@ public class ReadVolatile {
         executorService.shutdown();
 
 
-        System.out.println("result:" + obj.get());
+        System.out.println("result:" + obj.get()+" count:"+count.get());
     }
 
 

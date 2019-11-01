@@ -30,7 +30,7 @@ public class UnderstandVolatile {
      *   虚拟机提供的轻量级同步机制
      *   1.保证可见性
      *   2. 不保证原子性
-     *   3.禁止指令重排
+     *   3.禁止指令重排（顺序性）
      */
     // 测试可见性
     public static void main(String[] args) {
