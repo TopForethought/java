@@ -1,7 +1,7 @@
 package top.forethought.jdkknowledge.collection;
 
-import java.util.Iterator;
-import java.util.TreeMap;
+import java.util.*;
+
 /**
  * @author  wangwei
  * @date     2019/3/20 12:25
@@ -18,6 +18,7 @@ public class ReadTreeMap {
         treeMap.put(1,"张三");
         treeMap.put(2,"李四");
 
+        Queue queue=new ArrayDeque();
     Iterator<Integer> it=  treeMap.keySet().iterator();
       while (it.hasNext()){
           Integer key=it.next();

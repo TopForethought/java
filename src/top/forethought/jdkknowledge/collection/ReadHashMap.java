@@ -1,6 +1,7 @@
 package top.forethought.jdkknowledge.collection;
 
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author  wangwei
@@ -15,6 +16,9 @@ import java.util.HashMap;
  *        红黑树:是自平衡二叉树,红黑树保证了所有到叶子的路径上黑色节点一样多,也就保证了不会出现路径是最短路径两倍的情况
  *                 在执行插入操作时,通过旋转维持红黑树的性质
  *        但是为什么不使用AVL,平衡二叉树呢??
+ *
+ *        AVL 树更加严格，高度差不超过1 ，查找速度较快，但是代价是插入和删除时调整需要费时
+ *        红黑树 插入，删除快，适合修改多的场景，高度差是 不超过2倍
  *
  *  hash  函数时将高位的影响扩散到低位
  */

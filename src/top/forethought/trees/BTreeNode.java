@@ -6,7 +6,6 @@ import java.util.Queue;
 
 /**
  * @author  wangwei
- * @date     2019/2/7 14:23
  * @classDescription  二叉树节点
  *
  */
@@ -15,6 +14,30 @@ public class BTreeNode <T> {
     private T data;
     private BTreeNode lChild;
     private BTreeNode rChild;
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public BTreeNode getLChild() {
+        return lChild;
+    }
+
+    public void setLChild(BTreeNode lChild) {
+        this.lChild = lChild;
+    }
+
+    public BTreeNode getRChild() {
+        return rChild;
+    }
+
+    public void setRChild(BTreeNode rChild) {
+        this.rChild = rChild;
+    }
 
     public BTreeNode(T data) {
         this.data = data;

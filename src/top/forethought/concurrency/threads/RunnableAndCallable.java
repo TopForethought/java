@@ -1,8 +1,6 @@
 package top.forethought.concurrency.threads;
 
 
-import sun.awt.windows.ThemeReader;
-
 import java.util.concurrent.*;
 
 public class RunnableAndCallable {
@@ -17,10 +15,10 @@ public class RunnableAndCallable {
 //        new Thread(futureTask,"thread").start();
         System.out.println(futureTask.get());//会阻塞，耗时，尽量放在靠后
         System.out.println(Thread.currentThread().getName()); // fork join  操作：新起线程去执行 futureTask 耗时操作，最终取回线程执行结果
-        ThreadPoolExecutor.AbortPolicy;
-        ThreadPoolExecutor.CallerRunsPolicy;
-        ThreadPoolExecutor.DiscardOldestPolicy;
-        ThreadPoolExecutor.DiscardPolicy
+//        ThreadPoolExecutor.AbortPolicy;
+//        ThreadPoolExecutor.CallerRunsPolicy;
+//        ThreadPoolExecutor.DiscardOldestPolicy;
+//        ThreadPoolExecutor.DiscardPolicy
     }
 }
 

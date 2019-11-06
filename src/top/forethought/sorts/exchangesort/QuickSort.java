@@ -3,6 +3,11 @@ package top.forethought.sorts.exchangesort;
 import top.forethought.common.utils.ArrayUtil;
 import top.forethought.sorts.interfaces.Sortable;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 /**
  * @author wangwei
  * @date 2019/1/24 18:58
